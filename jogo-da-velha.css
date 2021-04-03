@@ -1,3 +1,42 @@
+* {
+		margin: 0;
+		box-sizing: border-box;
+		font-family: arial, sans-serif;
+}
+
+body {
+		width: 100vw;
+		height: 100vh;
+		padding-top: 100px;
+		
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+}
+
 h1 {
-    color: lightblue;
+		font-size: 64px;
+		font-weight: bold;
+}
+
+p {
+		margin: 70px 0 30px;
+		font-size: 32px;
+}
+
+main {
+  background: black;
+  border: 1px solid black;
+  border-radius: 50px;
+  
+  overflow: hidden;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 1px;
+}
+
+.box {
+		width: 25vw;
+		height: 25vw;
+		background: white;
 }
