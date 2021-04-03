@@ -6,7 +6,6 @@
 
 body {
 		width: 100vw;
-		height: 100vh;
 		padding-top: 100px;
 		
 		display: flex;
@@ -25,6 +24,7 @@ p {
 }
 
 main {
+  margin-bottom: 50px;
   background: black;
   border: 1px solid black;
   border-radius: 50px;
@@ -36,7 +36,7 @@ main {
 }
 
 .box {
-		width: 25vw;
-		height: 25vw;
+		width: min(25vw, 25vh);
+		height: min(25vw, 25vh);
 		background: white;
 }
