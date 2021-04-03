@@ -1,1 +1,1 @@
-alert('jogo da véia')
+//alert('jogo da véia')
