@@ -25,7 +25,7 @@ p {
 }
 
 main {
-	margin-bottom: 10vh;
+	margin-bottom: 5vh;
 	background: #f19c79;
 	border: 2px solid #f19c79;
 	border-radius: 25px;
@@ -41,6 +41,36 @@ main {
 	background: #f6f4d2;
 	border: 2px solid #f19c79;
 	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box i{
+	width: fit-content;
+	font-size: 100px;
+	color: #a44a3f;
+}
+
+button{
+	width: 30vw;
+	height: 8vh;
+	border-radius: 5px;
+	margin-bottom: 5vh;
+	background-color: #f19c79;
+	font-size: 24px;
+	border: none;
+}
+
+button:focus{
+	outline-style: none;
+}
+
+button:hover{
+	background-color: #a44a3f;
+	font-weight: bold;
+	color: white;
+	transition: 1.5s;
 }
 
 footer{
