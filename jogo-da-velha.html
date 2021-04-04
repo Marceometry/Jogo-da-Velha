@@ -4,29 +4,44 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="jogo-da-velha.css">
+	<script src="https://kit.fontawesome.com/70aefda47d.js" crossorigin="anonymous"></script>
+	
 </head>
 
 <body>
 	<header>
 		<h1>Jogo da Véia</h1>
 
-		<p>Agora é a vez do jogador: X</p>
+		<div id="mostrador">
+			<p>Agora é a vez do jogador: <i class=""></i></p>
+		</div>
+		<!--far fa-circle      fas fa-times-->
 	</header>
 
 	<main>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
+		<div id="a1" class="box" jogada=""></div>
+		<div id="a2" class="box" jogada=""></div>
+		<div id="a3" class="box" jogada=""></div>
 
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
+		<div id="b1" class="box" jogada=""></div>
+		<div id="b2" class="box" jogada=""></div>
+		<div id="b3" class="box" jogada=""></div>
 
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
+		<div id="c1" class="box" jogada=""></div>
+		<div id="c2" class="box" jogada=""></div>
+		<div id="c3" class="box" jogada=""></div>
 	</main>
+
+	<button onclick="inicializarEspaco()">Começar!</button>
+
 </body>
-<script src="jogo-da-velha.js"></script>
+
+<script type="text/javascript" src="jogo-da-velha.js"></script>
+
+<footer>
+	<p><i class="far fa-copyright"></i> Marcelino Teixeira e Rafaela Bobsin</p>
+	<p>Made with <i class="fas fa-heart"></i> by <a href="https://github.com/Marceometry">Marceometry</a> and <a
+			href="https://github.com/RafaBobsin">RafaBobsin</a></p>
+</footer>
 
 </html>
