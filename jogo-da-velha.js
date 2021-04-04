@@ -6,6 +6,11 @@ const player2 = "o";
 var playTime = player1;
 var gameOver = false;
 
+/*window.onload = function () {
+    atualiza();
+    inicializarEspaco();
+}*/
+
 function start() {
     atualiza();
     inicializarEspaco();
@@ -79,13 +84,13 @@ function verificarvencedor() {
     } else if (((c3 == c2 && c3 == c1) || (c3 == a3 && c3 == b3)) && c3 != "") {
         vencedor = c3;
     }
-    
+
     if (vencedor != "") {
         gameOver = true;
         alert("O vencedor foi: " + vencedor);
     } if ((a1 != "" && a2 != "" && a3 != "" &&
-    b1 != "" && b2 != "" && b3 != "" &&
-    c1 != "" && c2 != "" && c3 != "") && vencedor == "") {
+        b1 != "" && b2 != "" && b3 != "" &&
+        c1 != "" && c2 != "" && c3 != "") && vencedor == "") {
         gameOver = true;
         alert("Deu empate!");
     }
