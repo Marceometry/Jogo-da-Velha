@@ -15,6 +15,9 @@ function play() {
 }
 
 function start() {
+    const mostrador = document.querySelectorAll("#mostrador p")[0]
+    mostrador.innerHTML = 'Agora é a vez do jogador: <i class=""></i>'
+
     atualiza();
     inicializarEspaco();
     gameStarted = true
@@ -27,6 +30,8 @@ function start() {
 
 function restart() {
     const espacos = document.getElementsByClassName("box");
+    const mostrador = document.querySelectorAll("#mostrador p")[0]
+    mostrador.innerHTML = 'Agora é a vez do jogador: <i class=""></i>'
 
     for (var i = 0; i < espacos.length; i++) {
         if (espacos[i].innerHTML != '') {
@@ -34,19 +39,19 @@ function restart() {
             espacos[i].setAttribute("jogada", '');
 
             playTime = player1;
-            atualiza();
         }
     }
     gameOver = false
+    atualiza();
 }
 
 function atualiza() {
     if (gameOver == false) {
         if (playTime == player1) {
-            var player = document.querySelectorAll("div#mostrador i")[0];
+            var player = document.querySelectorAll("#mostrador i")[0];
             player.setAttribute("class", "fas fa-times");
         } else {
-            var player = document.querySelectorAll("div#mostrador i")[0];
+            var player = document.querySelectorAll("#mostrador i")[0];
             player.setAttribute("class", "far fa-circle");
         }
         return;
@@ -109,13 +114,15 @@ function verificarVencedor() {
         vencedor = c3;
     }
 
+    const mostrador = document.querySelectorAll("#mostrador p")[0]
+
     if (vencedor != "") {
         gameOver = true;
-        alert("O vencedor foi: " + vencedor);
+        mostrador.innerHTML = `O vencedor foi: ${vencedor}!`;
     } if ((a1 != "" && a2 != "" && a3 != "" &&
         b1 != "" && b2 != "" && b3 != "" &&
         c1 != "" && c2 != "" && c3 != "") && vencedor == "") {
         gameOver = true;
-        alert("Deu empate!");
+        mostrador.innerHTML = `O jogo empatou!`;
     }
 }
