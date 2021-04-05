@@ -5,10 +5,11 @@
 }
 
 body {
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	background-color: rgb(230, 230, 230);
 }
 
 h1 {
@@ -31,6 +32,7 @@ main {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	gap: 1px;
+	box-shadow: 0px 0px 20px black;
 }
 
 .box {
@@ -44,7 +46,7 @@ main {
 }
 
 .box:hover {
-	background: rgb(230, 230, 230);
+	background: #cbdfbd /*rgb(230, 230, 230)*/;
 	transition: .5s;
 }
 

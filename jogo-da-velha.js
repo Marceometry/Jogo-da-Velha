@@ -118,11 +118,11 @@ function verificarVencedor() {
 
     if (vencedor != "") {
         gameOver = true;
-        mostrador.innerHTML = `O vencedor foi: ${vencedor}!`;
+        mostrador.innerHTML = `<strong>O vencedor foi: ${vencedor}!</strong>`;
     } if ((a1 != "" && a2 != "" && a3 != "" &&
         b1 != "" && b2 != "" && b3 != "" &&
         c1 != "" && c2 != "" && c3 != "") && vencedor == "") {
         gameOver = true;
-        mostrador.innerHTML = `O jogo empatou!`;
+        mostrador.innerHTML = `<strong>O jogo empatou!</strong>`;
     }
 }
