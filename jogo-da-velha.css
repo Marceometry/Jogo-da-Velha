@@ -43,6 +43,11 @@ main {
 	cursor: pointer;
 }
 
+.box:hover {
+	background: rgb(230, 230, 230);
+	transition: .5s;
+}
+
 .box i{
 	width: fit-content;
 	font-size: 100px;
