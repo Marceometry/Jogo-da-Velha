@@ -1,19 +1,43 @@
-//alert('jogo da véia')
-
-const player1 = "x";
-const player2 = "o";
+const player1 = "X";
+const player2 = "O";
 
 var playTime = player1;
 var gameOver = false;
+var gameStarted = false;
 
-/*window.onload = function () {
-    atualiza();
-    inicializarEspaco();
-}*/
+
+function play() {
+    if (gameStarted == false) {
+        start()
+    } else {
+        restart()
+    }  
+}
 
 function start() {
     atualiza();
     inicializarEspaco();
+    gameStarted = true
+
+    const button = document.getElementById('play')
+    button.innerHTML = 'Recomeçar'
+    button.style.background = 'red'
+    button.style.color = 'white'
+}
+
+function restart() {
+    const espacos = document.getElementsByClassName("box");
+
+    for (var i = 0; i < espacos.length; i++) {
+        if (espacos[i].innerHTML != '') {
+            espacos[i].innerHTML = '';
+            espacos[i].setAttribute("jogada", '');
+
+            playTime = player1;
+            atualiza();
+        }
+    }
+    gameOver = false
 }
 
 function atualiza() {
@@ -30,13 +54,13 @@ function atualiza() {
 }
 
 function inicializarEspaco() {
-    var espacos = document.getElementsByClassName("box");
+    const espacos = document.getElementsByClassName("box");
 
     for (var i = 0; i < espacos.length; i++) {
         espacos[i].addEventListener("click", function () {
             if (gameOver == false) {
 
-                if (this.getElementsByTagName(i).length == 0) {
+                if (this.innerHTML == '') {
                     if (playTime == player1) {
                         this.innerHTML = "<i class='fas fa-times'></i>";
                         this.setAttribute("jogada", player1);
@@ -53,14 +77,14 @@ function inicializarEspaco() {
                     atualiza();
                 }
 
-                verificarvencedor();
+                verificarVencedor();
                 return;
             }
         })
     }
 }
 
-function verificarvencedor() {
+function verificarVencedor() {
     var a1 = document.getElementById("a1").getAttribute("jogada");
     var a2 = document.getElementById("a2").getAttribute("jogada");
     var a3 = document.getElementById("a3").getAttribute("jogada");
