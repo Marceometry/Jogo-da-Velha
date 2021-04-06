@@ -1,5 +1,5 @@
 * {
-	margin: 0;
+	margin: 0; 5
 	box-sizing: border-box;
 	font-family: arial, sans-serif;
 }
@@ -32,7 +32,7 @@ main {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	gap: 1px;
-	box-shadow: 0px 0px 20px black;
+	box-shadow: 0px 0px 10px black;
 }
 
 .box {
@@ -46,7 +46,7 @@ main {
 }
 
 .box:hover {
-	background: #cbdfbd /*rgb(230, 230, 230)*/;
+	background: #f0f8eb /*rgb(230, 230, 230)*/;
 	transition: .5s;
 }
 
@@ -100,7 +100,7 @@ footer a {
 
 footer a:hover {
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 22px;
 	color: white;
 	transition: 1s;
 }
