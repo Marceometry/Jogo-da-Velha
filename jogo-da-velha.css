@@ -46,7 +46,7 @@ main {
 }
 
 .box:hover {
-	background: #f0f8eb /*rgb(230, 230, 230)*/;
+	background: #eaffdd /*rgb(230, 230, 230)*/;
 	transition: .5s;
 }
 
